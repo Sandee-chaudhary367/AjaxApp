@@ -4,6 +4,7 @@ var API_KEY = "6841e5450643e5d4ff59981dbf58944e";
 // -- On load --
 $(document).ready(function(){
     // If geolocation is not supported, hide the geolocaion icon
+    console.log(!navigator.geolocation);
     if (!navigator.geolocation){
         $('#geolocation').hide();
     }
@@ -15,7 +16,7 @@ $(document).ready(function(){
     }
     else {
         // Default city
-        city = "London";
+        city = "Delhi";
     }
     // Get and display current date
     date = moment();
