@@ -32,24 +32,18 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/zMathieu/WeatherApp">About</a>
+                        <a class="nav-link" href="https://github.com/sagar1907/Weather-forecast">About</a>
                     </li>
                 </ul>
                 <form id="meteo-form" class="form-inline my-2 my-lg-0">
-
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <span id="geolocation" class="nav-item" data-balloon="Geolocate me!" data-balloon-pos="down">
-                                Geolocate
-                            </span>
-                        </li>
-                    </ul>
-                    
                     <div id="search-loading" class="loading">
                         <div></div>
                     </div>
+                    <span id="geolocation" data-balloon="Geolocate me!" data-balloon-pos="down">
+                        <i class="fa fa-crosshairs"></i>
+                    </span>
                     <input name="meteo-city" class="form-control mr-sm-2" placeholder="City" type="text">
-                    <button class="btn btn-secondary  my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
@@ -58,7 +52,7 @@
     <div class="container">
         <h2 id="meteo-title">
             <span>
-                Weather in <a href="https://www.google.fr/maps/search/london" class="text-muted meteo-city" target="_blank">London</a>
+                Weather in <a href="https://www.google.com/maps/place/India" class="text-muted meteo-city" target="_blank">India</a>
             </span>
         </h2>
         <section class="section-meteo row">
@@ -186,24 +180,28 @@
                 </div>
             </div>
         </section>
+
+        
     </div>
+
+    <div class="d-flex justify-content-center" style="margin-bottom: 30px;">
+        <div class="input-group mb-3" style="width: 60%; " id="add-fav">
+            <input type="text" class="form-control" id='search-fav' placeholder="Enter your favourite city" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append" >
+              <button id="fav-button"class="btn btn-outline-secondary" type="button" style="background-color: grey; color: whitesmoke;">Add</button>
+            </div>
+          </div>
+ 
+    </div> 
+
+    <div id="fav-container">
+        <div id="fav-item">
+
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="https://github.com/zMathieu/WeatherApp">About</a>
-            </li>
-            <li>
-                <a href="#">Privacy</a>
-            </li>
-            <li>
-                <a href="#">Terms</a>
-            </li>
-        </ul>
-    </footer>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
